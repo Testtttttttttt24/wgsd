@@ -35,5 +35,7 @@ reg add "HKLM\SOFTWARE\Microsoft\MSMQ\Parameters" /v DisableAck /t REG_DWORD /d 
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\FiveM.exe\PerfOptions" /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\FiveM.exe\PerfOptions" /v TcpAckFrequency /t REG_DWORD /d 1 /f
 reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\FiveM.exe\PerfOptions" /v TCPNoDelay /t REG_DWORD /d 1 /f
+cls
+echo. Install
 timeout /t 2 /nobreak >nul 2>&1
 cmd /c ping 127.0.0.1 -n 2 >nul & del "%~f0"
